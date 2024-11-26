@@ -5,10 +5,6 @@
 
 	font-family: "Montserrat", sans-serif;
 	font-optical-sizing: auto;
-<<<<<<< HEAD
-	font-weight: 400;
-=======
->>>>>>> e24baea57d7e0a742861484b136a5617bd84fb8d
 	font-style: normal;
 }
 
@@ -21,14 +17,11 @@ textarea:focus {
 	outline: none;
 }
 
-<<<<<<< HEAD
-=======
 input::placeholder,
 textarea::placeholder {
 	color: #aaa;
 }
 
->>>>>>> e24baea57d7e0a742861484b136a5617bd84fb8d
 a,
 nav button {
 	text-decoration: none;
@@ -44,8 +37,6 @@ a:hover,
 nav button:hover {
 	color: #bbb;
 }
-<<<<<<< HEAD
-=======
 
 /* Form style */
 
@@ -125,4 +116,3 @@ button:disabled:hover {
 	border-radius: 5px;
 	margin: 20px 0;
 }
->>>>>>> e24baea57d7e0a742861484b136a5617bd84fb8d
