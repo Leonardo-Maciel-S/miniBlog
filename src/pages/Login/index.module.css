@@ -1,0 +1,10 @@
+.login {
+	text-align: center;
+}
+
+.login p {
+	color: #aaa;
+	width: 100%;
+	text-align: center;
+	margin-bottom: 40px;
+}

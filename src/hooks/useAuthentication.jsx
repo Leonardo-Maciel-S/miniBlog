@@ -7,6 +7,7 @@ import {
 } from "firebase/auth";
 
 import { useState, useEffect } from "react";
+import { auth } from "../firebase/config";
 
 export const useAuthentication = () => {
 	const [error, setError] = useState(null);
@@ -15,8 +16,6 @@ export const useAuthentication = () => {
 	//cleanup
 	// deal with memory leak
 	const [cancelled, setCancelled] = useState(false);
-
-	const auth = getAuth();
 
 	function checkIfIsCancelled() {
 		if (cancelled) return;
@@ -41,9 +40,6 @@ export const useAuthentication = () => {
 
 			return user;
 		} catch (error) {
-			console.log(error);
-			console.log(typeof error.message);
-
 			let systemErrorMessage;
 
 			if (error.message.includes("password")) {
@@ -59,6 +55,37 @@ export const useAuthentication = () => {
 		}
 	};
 
+	//logout
+	const logout = () => {
+		checkIfIsCancelled();
+		signOut(auth);
+	};
+
+	//login
+
+	const login = async (data) => {
+		checkIfIsCancelled();
+		setLoading(true);
+		setError(false);
+
+		try {
+			await signInWithEmailAndPassword(auth, data.email, data.password);
+			setLoading(false);
+		} catch (error) {
+			console.log(error.message);
+			let systemErrorMessage;
+
+			if (error.message.includes("auth/invalid-credential")) {
+				systemErrorMessage = "Email ou senha incorreta.";
+			} else {
+				systemErrorMessage = "Ocorreu um erro, por favor tente mais tarde.";
+			}
+
+			setError(systemErrorMessage);
+			setLoading(false);
+		}
+	};
+
 	useEffect(() => {
 		return () => setCancelled(true);
 	}, []);
@@ -68,5 +95,7 @@ export const useAuthentication = () => {
 		createUser,
 		error,
 		loading,
+		logout,
+		login,
 	};
 };

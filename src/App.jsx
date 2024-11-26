@@ -1,6 +1,6 @@
 import "./App.css";
 
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { onAuthStateChanged } from "firebase/auth";
 
 //hooks
@@ -47,10 +47,22 @@ function App() {
 						<Route path="/" element={<Home />} />
 						<Route path="/home" element={<Home />} />
 						<Route path="/about" element={<About />} />
-						<Route path="/login" element={<Login />} />
-						<Route path="/register" element={<Register />} />
-						<Route path="/post/create" element={<CreatePost />} />
-						<Route path="/Dashboard" element={<Dashboard />} />
+						<Route
+							path="/login"
+							element={!user ? <Login /> : <Navigate to="/" />}
+						/>
+						<Route
+							path="/register"
+							element={!user ? <Register /> : <Navigate to="/" />}
+						/>
+						<Route
+							path="/post/create"
+							element={user ? <CreatePost /> : <Navigate to="/login" />}
+						/>
+						<Route
+							path="/dashboard"
+							element={user ? <Dashboard /> : <Navigate to="/login" />}
+						/>
 					</Routes>
 				</div>
 				<Footer />
