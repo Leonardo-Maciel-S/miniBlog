@@ -14,6 +14,8 @@ const Home = () => {
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
+
+		if (query) return Navigate(`/search?1=${query}`);
 	};
 	return (
 		<div className={styles.home}>
