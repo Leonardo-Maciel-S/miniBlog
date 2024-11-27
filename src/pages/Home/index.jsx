@@ -1,4 +1,4 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link, useNavigate, NavLink } from "react-router-dom";
 import { useState } from "react";
 import { useFetchDocuments } from "../../hooks/useFetchDocuments";
 
@@ -11,12 +11,14 @@ import PostDetails from "../../components/PostDetails";
 const Home = () => {
 	const [query, setQuery] = useState("");
 	const { documents: posts, loading } = useFetchDocuments("posts");
+	const navigate = useNavigate();
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-
-		if (query) return Navigate(`/search?1=${query}`);
+		console.log("teste");
+		if (query) return navigate(`/search?q=${query}`);
 	};
+
 	return (
 		<div className={styles.home}>
 			<h1>Veja os nossos post mais recentes</h1>
@@ -27,7 +29,7 @@ const Home = () => {
 					value={query}
 					onChange={(e) => setQuery(e.target.value)}
 				/>
-				<button type="button" className="btn btn-dark">
+				<button type="submit" className="btn btn-dark">
 					Pesquisar
 				</button>
 			</form>
