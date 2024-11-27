@@ -18,6 +18,10 @@ h3 {
 	text-align: center;
 }
 
+img {
+	object-fit: cover;
+}
+
 input:focus,
 textarea:focus {
 	outline: none;

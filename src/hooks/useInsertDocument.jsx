@@ -37,6 +37,7 @@ export const useInsertDocument = (DocCollection) => {
 			type: "LOADING",
 			payload: insertDocument,
 		});
+
 		try {
 			const newDocument = { ...document, createdAt: Timestamp.now() };
 
