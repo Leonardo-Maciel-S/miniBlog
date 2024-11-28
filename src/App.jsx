@@ -22,6 +22,7 @@ import Register from "./pages/Register";
 import { AuthProvider } from "./context/AuthContext";
 import CreatePost from "./pages/CreatePost";
 import Dashboard from "./pages/Dashboard";
+import Post from "./pages/Post";
 
 function App() {
 	const [user, setUser] = useState(undefined);
@@ -49,6 +50,7 @@ function App() {
 						<Route path="/home" element={<Home />} />
 						<Route path="/about" element={<About />} />
 						<Route path="/search" element={<Search />} />
+						<Route path="/post/:id" element={<Post />} />
 						<Route
 							path="/login"
 							element={!user ? <Login /> : <Navigate to="/" />}
