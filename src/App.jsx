@@ -17,12 +17,12 @@ import About from "./pages/About";
 import Search from "./pages/Search";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+import Post from "./pages/Post";
+import Dashboard from "./pages/Dashboard";
+import CreatePost from "./pages/CreatePost";
 
 //context
 import { AuthProvider } from "./context/AuthContext";
-import CreatePost from "./pages/CreatePost";
-import Dashboard from "./pages/Dashboard";
-import Post from "./pages/Post";
 
 function App() {
 	const [user, setUser] = useState(undefined);
