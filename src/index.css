@@ -19,7 +19,7 @@ h3 {
 }
 
 img {
-	object-fit: cover;
+	object-fit: 16 / 9;
 }
 
 input:focus,

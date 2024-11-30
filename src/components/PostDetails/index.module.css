@@ -1,9 +1,15 @@
 .post_detail {
 	margin-bottom: 2em;
+	text-align: center;
 }
 
 .post_detail img {
 	max-width: 600px;
+	margin: 0 auto;
+}
+
+.post_detail p {
+	text-align: left;
 }
 
 .post_detail h2 {
