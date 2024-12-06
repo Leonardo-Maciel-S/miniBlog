@@ -1,9 +1,54 @@
 # MiniBlog
-Projeto de miniBlog para exercitar conceitos como: 
-- firebase
-- autenticação
-- react route dom
-- context API 
-- hooks 
 
+Projeto de miniBlog para exercitar conceitos em Reactjs como: 
 
+#### Hooks: 
+  - Utilização dos já existentes e criação de Custom Hooks.
+
+#### Context API:
+  - Compartilhamento de estados por todo meu projeto sem ter que ficar passando como props.
+  
+#### React route dom
+  - Navegação entre diversas paginas diferentes.
+
+#### Firebase
+  - Biblioteca que nos permite interagir com o bando de dados.
+
+#### Autenticação
+ - Sistema de autenticação onde controla quais paginas o usuário pode ver caso esteja logado ou deslogado.
+
+#### Manipulação do DB com o firebase
+ - Custons hooks personalizados focados em funcionalidade de get, post, put e delete utilizando os comandos do firabase.
+
+---
+---
+# Home
+- Na tela home é possível ver os posts que você ou outras pessoas fizeram.
+  ![image](https://private-user-images.githubusercontent.com/111988047/393268296-6c118a97-1033-46ec-a048-381b5c10f35b.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MzM0OTMzMDQsIm5iZiI6MTczMzQ5MzAwNCwicGF0aCI6Ii8xMTE5ODgwNDcvMzkzMjY4Mjk2LTZjMTE4YTk3LTEwMzMtNDZlYy1hMDQ4LTM4MWI1YzEwZjM1Yi5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQxMjA2JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MTIwNlQxMzUwMDRaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT01ZmJhMGIwZTBmOWE2ZTJhMTY2Yjc4ODliZDg1YTZlYTZhMzJiNjZlN2Y5MDZlZTMxNWIxOGMwODgzMTIwNTQxJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.AJxEtmIYCDL6vAQOJPixknq-PbbpV-CWuMtGrEThJcc)
+
+# Ler detalhes do post
+-  Nessa tela conseguimos ver a mensagem inteira do post, entre outros detalhes.
+  ![image](https://private-user-images.githubusercontent.com/111988047/393268565-82965c28-348e-4e92-a5af-56ce7d683247.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MzM0OTM4OTEsIm5iZiI6MTczMzQ5MzU5MSwicGF0aCI6Ii8xMTE5ODgwNDcvMzkzMjY4NTY1LTgyOTY1YzI4LTM0OGUtNGU5Mi1hNWFmLTU2Y2U3ZDY4MzI0Ny5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQxMjA2JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MTIwNlQxMzU5NTFaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0yZDJjZTNhNDUxMWE3NTliZWM1ODUxMDNmNTdmMjlkZjI3MTRlOTQ2Yzc0MDkxZmI4MjUxZTJjODA3MWIxNDllJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.n7SPPoq-eX4tkLdieeTSmAc6S8W45thukKn-EZ21hSw)
+
+# Criar post
+- Nessa tela é possível criar novos posts, onde é definido:
+  1. Título
+  2. Url da imagem
+  3. Corpo do post
+  4. Tags 
+
+   > ![image](https://private-user-images.githubusercontent.com/111988047/393268773-7d9abe3b-b128-4786-acce-8f1e4bc5d6a5.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MzM0OTQxODgsIm5iZiI6MTczMzQ5Mzg4OCwicGF0aCI6Ii8xMTE5ODgwNDcvMzkzMjY4NzczLTdkOWFiZTNiLWIxMjgtNDc4Ni1hY2NlLThmMWU0YmM1ZDZhNS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQxMjA2JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MTIwNlQxNDA0NDhaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0zYmU0YmNkODA1NjEzY2UyNzRlMTFlODRkMDJhM2I1YWZhOTIxM2Q0ZTkwN2VmN2E2OWM4YWEyYWM4YjU5OTc2JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.-YoFRvjdzpMaZrCh44XiOZK0ghGqTLp96NlYPsIq_jQ)
+
+# Dashboard
+- Tela onde é feito o gerenciamento dos meus post.
+
+  ![image](https://private-user-images.githubusercontent.com/111988047/393268935-ca4f3177-9062-4e4f-861c-9bd34d30a295.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MzM0OTQzMzUsIm5iZiI6MTczMzQ5NDAzNSwicGF0aCI6Ii8xMTE5ODgwNDcvMzkzMjY4OTM1LWNhNGYzMTc3LTkwNjItNGU0Zi04NjFjLTliZDM0ZDMwYTI5NS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQxMjA2JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MTIwNlQxNDA3MTVaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1iMGRkOTczM2I4YTA0MTNkNmMzMWIxMmNiNTM3YWUxNjgyYjQyODM3ZDU3NGM5NTFhZDcyYTZmMGM3YjdiYjBmJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.1m9A7vAX4rcr80SUkG4wIvkO-RChVKo9eAU3tK9ZIA8)
+
+# Editar post
+ - Lugar onde consigo editar meus posts, também é possível alterar: 
+  1. Título
+  2. Url da imagem
+  3. Corpo do post
+  4. Tags 
+
+      ![image](https://private-user-images.githubusercontent.com/111988047/393269393-7a300918-9064-4096-9128-2186cfe61987.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MzM0OTQ4NDQsIm5iZiI6MTczMzQ5NDU0NCwicGF0aCI6Ii8xMTE5ODgwNDcvMzkzMjY5MzkzLTdhMzAwOTE4LTkwNjQtNDA5Ni05MTI4LTIxODZjZmU2MTk4Ny5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQxMjA2JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MTIwNlQxNDE1NDRaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0xM2UyODlmZTMwYzFlMzhjNTBhZGVkODI3MDg3MDQ2M2Y5NTAzNDg4OGExNjA5M2FiZTFjZjMzZGJlZTJkNTAxJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.m86eiHyL05PC6KeMC5MZphV4Fq9Qoavn6kvw8nyq4e0)
