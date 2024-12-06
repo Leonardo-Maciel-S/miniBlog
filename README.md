@@ -19,8 +19,7 @@ Projeto de miniBlog para exercitar conceitos em Reactjs como:
 
 #### Manipulação do DB com o firebase
  - Custons hooks personalizados focados em funcionalidade de get, post, put e delete utilizando os comandos do firabase.
-
----
+   
 ---
 # Home
 - Na tela home é possível ver os posts que você ou outras pessoas fizeram.
